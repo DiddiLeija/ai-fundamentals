@@ -1,3 +1,4 @@
 # TODO: use dependabot to upgrade?
-tensorflow==2.15.0
-numpy==1.26.3
+tensorflow
+numpy
+matplotlib
