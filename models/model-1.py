@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # preparamos los datos
-celsius = np.array([-40, 10, 0, 8, 15, 22, 38], dtype=float)
-fahrenheit = np.array([-40, 14, 32, 46, 59, 72, 100], dtype=float)
+celsius = np.array([-40, 10, 0, 8, 15, 22, 38, 50, 35], dtype=float)
+fahrenheit = np.array([-40, 14, 32, 46, 59, 72, 100, 122, 95], dtype=float)
 
 # ponemos las capas (capas densas)
 capaEntrada = tf.keras.layers.Dense(units=3, input_shape=[1])
@@ -28,5 +28,14 @@ plt.ylabel("Magnitud de perdida")
 plt.plot(historial.history["loss"])
 
 # Al final, el aprendizaje optimo se logra cuando la perdida es minima
-# antes de las 100 epocas. De no ocurrir esto, el modelo no aprende
+# antes de las 50 epocas. De no ocurrir esto, el modelo no aprende
 # adecuadamente y es necesario inspeccionarlo.
+
+# Veamos si el modelo ha aprendido bien...
+# debe decir que 37 grados celsius son 96 fahrenheit...
+
+print("Vamos a revisar!")
+grados = 37.0
+resultado = modelo.predict([grados])
+print("Si en celsius estamos a", str(grados) + "°...")
+print("... en Fahrenheit estaremos a", str(resultado) + "°, o no?")
