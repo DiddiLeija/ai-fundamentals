@@ -1,4 +1,10 @@
+# Requirements file to install with pip.
+#
 # TODO: use dependabot to upgrade?
-tensorflow
-numpy
-matplotlib
+# NOTE: The models/examples that use a certain
+#       package are listed for each dependency.
+
+tensorflow            # model-1
+numpy                 # model-1
+matplotlib            # model-1
+SpeechRecognition     # sr-1
