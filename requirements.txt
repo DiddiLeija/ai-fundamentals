@@ -8,3 +8,4 @@ tensorflow            # model-1
 numpy                 # model-1
 matplotlib            # model-1
 SpeechRecognition     # sr-1
+pyaudio               # sr-1
