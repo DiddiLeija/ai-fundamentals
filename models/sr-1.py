@@ -1,10 +1,9 @@
-# Un ejemplo de reconocimiento de voz, incluso con la habilidad
-# de abrir enlaces en línea si se le solicita.
+# Un ejemplo de reconocimiento de voz, que puede ser util
+# si en algun punto intento crear una IA que reconozca voz.
 
 # NOTE: no hay un notebook disponible de este ejemplo porque lo
 # he probado sobre la marcha en mi editor de codigo.
 
-import webbrowser
 import speech_recognition as sr
 
 r = sr.Recognizer()  # el objeto de reconocimiento
@@ -28,9 +27,5 @@ with sr.Microphone() as source:
         texto = r.recognize_google(audio, language="es_MX")
         # devuelve el texto escuchado
         print("usted>", texto)
-        # Ahora, solo por diversion, abriremos "diddileija.github.io" en el
-        # dado caso de que el programa lea "diddileija" en el texto.
-        if "diddileija" in str(texto).lower():
-            webbrowser.open("https://diddileija.github.io")
     except:
         print("IA> No te he entendido, intenta de nuevo.")
